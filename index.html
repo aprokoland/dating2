@@ -24,7 +24,7 @@
     <style>
         body { background-color: #000; margin: 0; padding: 0; }
         
-        /* Video Background with Top-Center Focus to keep heads in view */
+        /* Video Background with Bottom-Center Focus */
         .video-bg {
             position: fixed;
             top: 0;
@@ -32,7 +32,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top center; /* Focuses the video on the upper portion */
+            object-position: bottom center; /* Changed from top to focus on lower half */
             z-index: -2;
             filter: brightness(0.65);
         }
@@ -72,25 +72,20 @@
     </div>
 
     <script>
-        // List of video URLs
         const videos = [
             "https://giveaway.recipesmara.com/wp-content/uploads/2026/07/From-Klickpin.com-From-beginner-to-obsessed-Recreate-these-beautiful-road-trip-ideas-that-help-you-get-the-look-without-the-stress-with-aesthetic.mp4",
             "https://giveaway.recipesmara.com/wp-content/uploads/2026/07/From-Klickpin.com-Beginner-Friendly-Money-Saving-Tips-You-Need-Right-Now-pin-id-832180837433758481.mp4"
         ];
 
         function handlePrimaryAction() {
-            // Replace '#' with your actual tracking link
             window.location.href = "#"; 
         }
         
-        // Randomly select and play video on load
         window.addEventListener('load', () => {
             const video = document.getElementById('bg-video');
             const source = document.getElementById('video-source');
-            
             const randomVideo = videos[Math.floor(Math.random() * videos.length)];
             source.src = randomVideo;
-            
             video.load();
             video.play().catch(() => console.log("Autoplay blocked"));
         });
