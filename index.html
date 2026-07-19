@@ -1,94 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Essential for Mobile Visibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATCH DETECTED!</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: { 500: '#ec4899', 600: '#db2777' }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body { background-color: #000; margin: 0; padding: 0; }
-        
-        /* Video Background with Bottom-Center Focus */
-        .video-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: bottom center; /* Changed from top to focus on lower half */
-            z-index: -2;
-            filter: brightness(0.65);
-        }
+    <meta charset="UTF-8">
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1409409100934830');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1409409100934830&ev=PageView&noscript=1"
+    /></noscript>
+
+    <script type="text/javascript">
+        // Language detection logic
+        window.onload = function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            var textElement = document.getElementById("loading-text");
+
+            if (userLang.includes('pt')) {
+                textElement.innerHTML = "Por favor, aguarde...";
+            } else if (userLang.includes('fr')) {
+                textElement.innerHTML = "Veuillez patienter...";
+            } else {
+                textElement.innerHTML = "Please Wait...";
+            }
+        };
+
+        // Redirect logic (700ms delay)
+        setTimeout(function() {
+            window.location.replace("https://0wdb.com/link?z=10851588&var={SOURCE_ID}&ymid={CLICK_ID}");
+        }, 700);
+    </script>
+
+    <!-- Fallback redirect if JS is disabled -->
+    <meta http-equiv="refresh" content="1;url=https://0wdb.com/link?z=10851588&var={SOURCE_ID}&ymid={CLICK_ID}">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centers content vertically on any screen */
+        }
+        .l {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px; /* Slightly larger for better mobile visibility */
+            height: 50px;
+            animation: s 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes s { to { transform: rotate(360deg); } }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 relative overflow-hidden font-sans">
-
-    <!-- Video Background Container -->
-    <video autoplay loop muted playsinline class="video-bg" id="bg-video">
-        <source src="" type="video/mp4" id="video-source">
-    </video>
-
-    <!-- Main UI Card: Centered and responsive -->
-    <div class="glass-panel w-full max-w-sm sm:max-w-md rounded-3xl p-6 sm:p-8 text-center relative z-10 mx-auto">
-        <div class="mx-auto w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mb-6 relative">
-            <div class="absolute inset-0 rounded-full bg-brand-500 opacity-20 animate-ping"></div>
-            <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
-        </div>
-
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">MATCH DETECTED!</h1>
-        <p class="text-sm sm:text-base text-gray-600 mb-8">There are currently active members within 5 miles looking for quick meetups. Do you want to see who is online?</p>
-
-        <button onclick="handlePrimaryAction()" class="w-full bg-brand-600 text-white font-bold py-4 rounded-2xl hover:bg-brand-700 transition shadow-lg transform active:scale-[0.98]">
-            Continue & View Profiles
-        </button>
-        
-        <button onclick="window.location.href='https://google.com'" class="mt-4 w-full text-gray-400 font-medium hover:text-gray-700 transition">
-            Exit
-        </button>
-    </div>
-
-    <script>
-        const videos = [
-            "https://giveaway.recipesmara.com/wp-content/uploads/2026/07/From-Klickpin.com-From-beginner-to-obsessed-Recreate-these-beautiful-road-trip-ideas-that-help-you-get-the-look-without-the-stress-with-aesthetic.mp4",
-            "https://giveaway.recipesmara.com/wp-content/uploads/2026/07/From-Klickpin.com-Beginner-Friendly-Money-Saving-Tips-You-Need-Right-Now-pin-id-832180837433758481.mp4"
-        ];
-
-        function handlePrimaryAction() {
-            window.location.href = "#"; 
-        }
-        
-        window.addEventListener('load', () => {
-            const video = document.getElementById('bg-video');
-            const source = document.getElementById('video-source');
-            const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-            source.src = randomVideo;
-            video.load();
-            video.play().catch(() => console.log("Autoplay blocked"));
-        });
-    </script>
+<body>
+    <div class="l"></div>
+    <p id="loading-text">Please Wait...</p>
 </body>
 </html>
