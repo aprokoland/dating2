@@ -77,5 +77,26 @@
             window.location.href = "https://p8f9a.bemobtrcks.com/click";
         }
     </script>
+    <!-- Drop-in Automatic Language Translator -->
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            autoDisplay: false
+        }, 'google_translate_element');
+        
+        // Automatically detect browser language and apply translation
+        setTimeout(function() {
+            var browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
+            var selectField = document.querySelector('.goog-te-combo');
+            if (selectField && browserLang !== 'en') {
+                selectField.value = browserLang;
+                selectField.dispatchEvent(new Event('change'));
+            }
+        }, 800);
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
