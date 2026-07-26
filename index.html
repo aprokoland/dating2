@@ -2,101 +2,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1207617364811763');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1207617364811763&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+    <meta name="robots" content="noindex, nofollow">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Chat Request | Nearby Connection</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Sandra Matha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-size: cover;
-            background-position: center 20%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        /* Global Reset and Body Styling */
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{
+            font-family:'Poppins',sans-serif;
+            background-color: #0b141a; /* Dark background matching the image */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
         }
-        
-        .glass-card {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+
+        /* Container for the profile card */
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Profile Image Styling */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYziMGfdvaDnzQ9cdaA1SZen7rLilMgJeyzwOQIT-zFYmXYCd4pg-CQGfC5e3lpYuM-sf2-xmLjH2cZgKmtD0aesr7q5uHDQaJ-pssdWNkiYjqLCHYMuuLigBycjFlhcXNVvRHIMbRnwrpwUBmzxMUcjc_Um5H2ZBkrmjlFhB9H_LV1HWGwwPBoou_Samg/s2118/1ac4cdd287a2e901358c68f1ff832692.jpg') center/cover no-repeat;
+            border: 4px solid #1e2a32;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Name Styling */
+        .profile-name {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main Gradient Button */
+        .main-btn {
+            background: linear-gradient(to right, #00d084, #0693e3); /* Green to Blue gradient */
+            border: none;
+            border-radius: 15px;
+            padding: 18px 40px;
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+            text-decoration: none;
+        }
+
+        .main-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
+        }
+
+        .chat-icon {
+            background: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-icon svg {
+            fill: #1a1a1a;
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-text {
+            color: #1a1a1a;
+            font-size: 20px;
+            font-weight: 600;
         }
     </style>
-<link rel="me" href="https://www.blogger.com/profile/18110309435231374074" />
+<link rel="me" href="https://www.blogger.com/profile/16390935981825461800" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4">
+<body>
 
-    <div id="chat-container" class="glass-card w-full max-w-sm rounded-3xl shadow-2xl overflow-hidden border border-slate-200">
-        
-        <!-- Header -->
-        <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center text-white font-black text-xl shadow-inner">J</div>
-                <div>
-                    <h2 class="font-bold text-slate-900 text-lg">Jessica</h2>
-                    <div class="flex items-center gap-1.5 text-xs text-emerald-600 font-semibold">
-                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Online Now
-                    </div>
-                </div>
-            </div>
+<div class="container">
+    <!-- Profile Section -->
+    <div class="profile-img"></div>
+    <h1 class="profile-name">Sandra Matha</h1>
+
+    <!-- Chat Button (Direct Redirect) -->
+    <a href="https://p8f9a.bemobtrcks.com/click" class="main-btn">
+        <div class="chat-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
         </div>
+        <span class="btn-text">Chat Me Up Now</span>
+    </a>
+</div>
 
-        <!-- Chat Content -->
-        <div class="p-6 space-y-6">
-            <div class="bg-slate-900 p-5 rounded-2xl rounded-bl-none text-white shadow-md text-2xl leading-tight font-black tracking-tight">
-                Hey! I just noticed you live nearby. Are you free to chat right now?
-            </div>
-
-            <div id="action-buttons" class="space-y-3">
-                <button onclick="handleRedirect()" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-extrabold text-lg rounded-2xl transition-all shadow-lg shadow-rose-300 active:scale-95">
-                    Yes, let's chat!
-                </button>
-                <button onclick="handleRedirect()" class="w-full py-4 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-bold text-lg rounded-2xl transition-all active:scale-95">
-                    Tell me more first
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const backgrounds = [
-            "https://shorturl.at/WjAqW",
-            "https://shorturl.at/FIXjW",
-            "https://shorturl.at/5sAKT",
-            "https://shorturl.at/xU28D"
-        ];
-
-        window.onload = function() {
-            const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-            document.body.style.backgroundImage = `url('${randomBg}')`;
-        };
-
-        function handleRedirect() {
-            window.location.href = "https://p8f9a.bemobtrcks.com/click";
-        }
-    </script>
-    <!-- Drop-in Automatic Language Translator -->
-<div id="google_translate_element" style="display:none;"></div>
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            autoDisplay: false
-        }, 'google_translate_element');
-        
-        // Automatically detect browser language and apply translation
-        setTimeout(function() {
-            var browserLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
-            var selectField = document.querySelector('.goog-te-combo');
-            if (selectField && browserLang !== 'en') {
-                selectField.value = browserLang;
-                selectField.dispatchEvent(new Event('change'));
-            }
-        }, 800);
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
