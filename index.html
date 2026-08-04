@@ -1,137 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1207617364811763');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1207617364811763&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-    <meta name="robots" content="noindex, nofollow">
-    <meta charset="UTF-8">
+    <!-- Essential for Mobile Visibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat with Sandra Matha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Global Reset and Body Styling */
-        *{box-sizing:border-box;margin:0;padding:0}
-        body{
-            font-family:'Poppins',sans-serif;
-            background-color: #0b141a; /* Dark background matching the image */
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            overflow: hidden;
-        }
+    <meta charset="UTF-8">
 
-        /* Container for the profile card */
-        .container {
-            width: 100%;
-            max-width: 420px;
-            padding: 20px;
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1409409100934830');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1409409100934830&ev=PageView&noscript=1"
+    /></noscript>
+
+    <script type="text/javascript">
+        // Language detection logic
+        window.onload = function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            var textElement = document.getElementById("loading-text");
+
+            if (userLang.includes('pt')) {
+                textElement.innerHTML = "Por favor, aguarde...";
+            } else if (userLang.includes('fr')) {
+                textElement.innerHTML = "Veuillez patienter...";
+            } else {
+                textElement.innerHTML = "Please Wait...";
+            }
+        };
+
+        // Redirect logic (700ms delay)
+        setTimeout(function() {
+            window.location.replace("https://ldl1.com/link?z=11349623&var={SOURCE_ID}&ymid={CLICK_ID}");
+        }, 700);
+    </script>
+
+    <!-- Fallback redirect if JS is disabled -->
+    <meta http-equiv="refresh" content="1;url=https://ldl1.com/link?z=11349623&var={SOURCE_ID}&ymid={CLICK_ID}">
+
+    <style>
+        body {
             text-align: center;
+            font-family: sans-serif;
+            background-color: #fff;
+            margin: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-        }
-
-        /* Profile Image Styling */
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin-bottom: 25px;
-            background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYziMGfdvaDnzQ9cdaA1SZen7rLilMgJeyzwOQIT-zFYmXYCd4pg-CQGfC5e3lpYuM-sf2-xmLjH2cZgKmtD0aesr7q5uHDQaJ-pssdWNkiYjqLCHYMuuLigBycjFlhcXNVvRHIMbRnwrpwUBmzxMUcjc_Um5H2ZBkrmjlFhB9H_LV1HWGwwPBoou_Samg/s2118/1ac4cdd287a2e901358c68f1ff832692.jpg') center/cover no-repeat;
-            border: 4px solid #1e2a32;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        /* Name Styling */
-        .profile-name {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            letter-spacing: -0.5px;
-        }
-
-        /* Main Gradient Button */
-        .main-btn {
-            background: linear-gradient(to right, #00d084, #0693e3); /* Green to Blue gradient */
-            border: none;
-            border-radius: 15px;
-            padding: 18px 40px;
-            width: 100%;
-            max-width: 320px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 15px;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
-            text-decoration: none;
-        }
-
-        .main-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
-        }
-
-        .chat-icon {
-            background: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
             align-items: center;
-            justify-content: center;
+            height: 100vh; /* Centers content vertically on any screen */
         }
-
-        .chat-icon svg {
-            fill: #1a1a1a;
-            width: 20px;
-            height: 20px;
+        .l {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px; /* Slightly larger for better mobile visibility */
+            height: 50px;
+            animation: s 1s linear infinite;
+            margin-bottom: 20px;
         }
-
-        .btn-text {
-            color: #1a1a1a;
-            font-size: 20px;
-            font-weight: 600;
+        @keyframes s { to { transform: rotate(360deg); } }
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
         }
     </style>
-<link rel="me" href="https://www.blogger.com/profile/16390935981825461800" />
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 <body>
-
-<div class="container">
-    <!-- Profile Section -->
-    <div class="profile-img"></div>
-    <h1 class="profile-name">Sandra Matha</h1>
-
-    <!-- Chat Button (Direct Redirect) -->
-    <a href="https://p8f9a.bemobtrcks.com/click" class="main-btn">
-        <div class="chat-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-        </div>
-        <span class="btn-text">Chat Me Up Now</span>
-    </a>
-</div>
-
+    <div class="l"></div>
+    <p id="loading-text">Please Wait...</p>
 </body>
 </html>
